@@ -1,22 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Attendance</title>
+  <meta charset="UTF-8" />
+  <title>Attendance</title>
+  <script>
+    function installApp() {
+      alert("Setelah menekan OK, Anda akan diarahkan untuk menginstal aplikasi.\n\nJika proses tidak terlihat, silakan kembali ke Home Screen Anda untuk melihat ikon aplikasi sedang dipasang.");
+      
+      // Delay 500ms agar alert terlihat dulu sebelum redirect
+      setTimeout(function() {
+        window.location.href = "itms-services://?action=download-manifest&url=https://github.com/razhou/razhou.github.io/raw/master/attendance/manifest.plist";
+      }, 500);
+    }
+  </script>
 </head>
 
 <body>
-Panduan Cara Install:
-<br/>
-<br/>
-<a href="https://github.com/razhou/razhou.github.io/raw/master/attendance/[ATTENDANCE] UTM Instalasi Mobile Apps iOS.pdf">Download PDF</a><br/><br/>
-
-
-<br /><br />
-Install aplikasi Attendance Untuk IOS dibawah:
-<br/>
-<br/>
-<a href="itms-services://?action=download-manifest&url=hitms-services://?action=download-manifest&url=https://github.com/razhou/razhou.github.io/raw/master/attendance/manifest.plist">Install Attendance IOS</a><br/><br/>
-
+  <h3>Panduan Cara Install:</h3>
+  <a href="https://github.com/razhou/razhou.github.io/raw/master/attendance/[ATTENDANCE] UTM Instalasi Mobile Apps iOS.pdf">Download PDF</a>
+  
+  <br/><br/>
+  <h3>Install aplikasi Attendance Untuk iOS di bawah:</h3>
+  <button onclick="installApp()">Install Attendance iOS</button>
 </body>
 </html>
